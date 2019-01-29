@@ -53,14 +53,19 @@ public class enc {
 
   public static byte mutateByte(byte oldbyte) {
     byte newbyte;
-    newbyte = (byte) (((int) oldbyte) - 2);
+    int newvalue;
+    newvalue = (((int) oldbyte));
 
+    newbyte = (byte) newvalue;
     return newbyte;
   }
 
   public static byte fixByte(byte oldbyte) {
     byte newbyte;
-    newbyte = (byte) (((int) oldbyte) + 2);
+    int newvalue;
+    newvalue = (((int) oldbyte) + 2);
+
+    newbyte = (byte) newvalue;
     return newbyte;
   }
 }
