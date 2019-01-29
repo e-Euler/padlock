@@ -19,10 +19,9 @@ public class keytest {
 
     while(mutatedKey.size() <= 255){
       currentsize = mutatedKey.size();
-      for(int x=0; x <= currentsize; x++){
+      for(int x=0; x < currentsize; x++){
         constructorArray.add(mutatedKey.get(x));
-
-        if(x<keylength-1){
+        if(x<charKey.size() & !(y >= charKey.size())){
           constructorArray.add(charKey.get(y));
         }else{
           y = 0;
@@ -30,14 +29,17 @@ public class keytest {
         }
         y++;
         passes ++;
-        mutatedKey = constructorArray;
-        System.out.print("\rMutating Key:"+ (1/(255/key.length()))*100+"% pass #"+passes+" Key size = "+mutatedKey.size());
-      }
 
+        System.out.print("\rMutating Key:"+ (passes/(255/key.length()))*100+"% pass #"+passes+" Key size = "+mutatedKey.size());
+      }
+      System.out.println(mutatedKey);
+      mutatedKey = constructorArray;
     }
+
     System.out.print("\nmutated Key = ");
     for(char x : mutatedKey){
       System.out.print(x);
     }
+    System.out.println();
   }
 }
