@@ -19,6 +19,7 @@ public class keytest {
 
     while(mutatedKey.size() <= 255){
       currentsize = mutatedKey.size();
+
       for(int x=0; x < currentsize; x++){
         constructorArray.add(mutatedKey.get(x));
         if(x<charKey.size() & !(y >= charKey.size())){
